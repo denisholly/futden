@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>FutDen</ion-title>
+        <ion-title>Home</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
@@ -13,9 +13,11 @@
       </ion-header>
         <ion-grid>
           <ion-row>
+            <h1 class="title">Latest News</h1>
             <the-news-swiper></the-news-swiper>
           </ion-row>
           <ion-row>
+            <h1 class="title">PL Table</h1>
             <home-table></home-table>
           </ion-row>
         </ion-grid>
@@ -36,5 +38,9 @@ export default  {
 <style scoped>
   ion-grid {
     padding: 5px 0;
+  }
+
+  .title {
+        padding: 0 20px;
   }
 </style>

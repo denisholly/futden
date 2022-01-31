@@ -1,5 +1,4 @@
 <template>
-    <h1 class="title">Latest News</h1>
     <ion-slides pager="false" :options="slideOpts">
         <ion-slide v-for="card in news.slice().reverse()" :key="card.id">
             <div class="up" :style="{ backgroundImage: 'url(' + card.url + ')' }">
@@ -62,15 +61,11 @@ export default defineComponent({
     }
 
     .down {
-        height: 30%;
+        min-height: 30%;
         padding: 0 20px;
         color: white;
         font-size: 17px;
         font-weight: bold;
         text-align: left;
-    }
-
-    .title {
-        padding: 0 20px;
     }
 </style>

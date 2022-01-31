@@ -11,22 +11,6 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   data() {
     return {
-      teams: [
-        {
-          id: 0, 
-          name: 'Chelsea', 
-          fullname: 'Chelsea FC', 
-          pts: 43, 
-          position: 3
-        },
-        {
-          id: 1, 
-          name: 'Liverpool', 
-          fullname: 'Liverpool FC', 
-          pts: 48, 
-          position: 2
-        },
-      ],
       news: [
         {
           id: 0, 
