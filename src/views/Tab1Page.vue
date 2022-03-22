@@ -6,11 +6,18 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">FutDen</ion-title>
-        </ion-toolbar>
-      </ion-header>
+        <ion-grid class="header">
+          <ion-row>
+            <ion-col>
+              <h1>FutDen</h1>
+            </ion-col>
+            <ion-col>
+              <ion-chip>
+                <ion-label color="secondary">Beta</ion-label>
+              </ion-chip>  
+            </ion-col>
+          </ion-row>
+        </ion-grid>
         <ion-grid>
           <ion-row>
             <h1 class="title">Latest News</h1>
@@ -38,6 +45,14 @@ export default  {
 <style scoped>
   ion-grid {
     padding: 5px 0;
+  }
+
+  .header {
+    width: 200px;
+  }
+
+  .header h1 {
+    padding: 0 !important;
   }
 
   .title {

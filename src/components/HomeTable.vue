@@ -11,7 +11,6 @@
             <th>+/-</th>
             <th>Gd</th>
             <th>Pts</th>
-            <!-- <th>Form</th> -->
         </tr>
         <tr v-for="team in top5Teams" :key="team.rank">
             <td></td>
@@ -27,7 +26,6 @@
             <td> {{ team.all.goals.for }}/{{ team.all.goals.against }} </td>
             <td> {{ team.goalsDiff }} </td>
             <td> {{ team.points }} </td>
-            <!-- <td> {{ team.form }} </td> -->
         </tr>
     </table>
 </template>
@@ -58,7 +56,7 @@
         },
         computed: {
             top5Teams () {
-                return this.teams.slice(0, 5);
+                return this.teams.slice(0, 20);
             }
         }
         
