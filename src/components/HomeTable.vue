@@ -1,33 +1,31 @@
 <template>
-    <table>
-        <tr>
-            <th></th>
-            <th>#</th>
-            <th colspan="2">TEAM</th>
-            <th>Pl</th>
-            <th>W</th>
-            <th>D</th>
-            <th>L</th>
-            <th>+/-</th>
-            <th>Gd</th>
-            <th>Pts</th>
-        </tr>
-        <tr v-for="team in top5Teams" :key="team.rank">
-            <td></td>
-            <td> {{ team.rank }} </td>
-            <td>
+    <div class="tableIonic">
+        <ion-row class="tableHeader">
+            <ion-col>#</ion-col>
+            <ion-col colspan="2">TEAM</ion-col>
+            <ion-col>Pl</ion-col>
+            <ion-col>W</ion-col>
+            <ion-col>D</ion-col>
+            <ion-col>L</ion-col>
+            <ion-col>+/-</ion-col>
+            <ion-col>Gd</ion-col>
+            <ion-col>Pts</ion-col>
+        </ion-row>
+        <ion-row class="tableContent" v-for="team in top5Teams" :key="team.rank">
+            <ion-col> {{ team.rank }} </ion-col>
+            <ion-col>
                     <img :src="team.team.logo" class="badge">
-            </td>
-            <td> {{ team.team.shortName }} </td>
-            <td> {{ team.all.played }} </td>
-            <td> {{ team.all.win }} </td>
-            <td> {{ team.all.draw }} </td>
-            <td> {{ team.all.lose }} </td>
-            <td> {{ team.all.goals.for }}/{{ team.all.goals.against }} </td>
-            <td> {{ team.goalsDiff }} </td>
-            <td> {{ team.points }} </td>
-        </tr>
-    </table>
+            </ion-col>
+            <ion-col> {{ team.team.shortName }} </ion-col>
+            <ion-col> {{ team.all.played }} </ion-col>
+            <ion-col> {{ team.all.win }} </ion-col>
+            <ion-col> {{ team.all.draw }} </ion-col>
+            <ion-col> {{ team.all.lose }} </ion-col>
+            <ion-col> {{ team.all.goals.for }}/{{ team.all.goals.against }} </ion-col>
+            <ion-col> {{ team.goalsDiff }} </ion-col>
+            <ion-col> {{ team.points }} </ion-col>
+        </ion-row>
+    </div>
 </template>
 
 <script>
@@ -65,25 +63,31 @@
 </script>
 
 <style scoped>
-    table {
-        width: 100%;
-        width: 95%;
+    .tableIonic {
+        width: 80%;
         margin: auto;
         font-size: 13px;
-        text-align: left;
+    }
+
+    .tableHeader {
+        float: left;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 11px;
+    }
+
+    .tableContent {
+        padding: 15px;
+        width: 100%;
+        margin-top: 15px;
         background-color: #222325;
-        border-radius: 15px;
+        border-radius: 10px;
     }
 
-    th {
-        color: rgb(165, 165, 165);
-        height: 40px;  
-    }
-
-    td {
+    ion-col {
+        display: flex;
+        align-items: center;
         height: 40px;
-        border-bottom: 1px solid black;
-        border-top: 1px solid black;
     }
 
     .badge {

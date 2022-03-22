@@ -5,6 +5,9 @@
 
             </div>
             <div class="down">
+                <!-- <ion-chip>
+                    <ion-label color="secondary">Secondary Label</ion-label>
+                </ion-chip> -->
                 <p> {{ card.title }} </p>
             </div>
         </ion-slide>
@@ -22,10 +25,10 @@ export default defineComponent({
         // Optional parameters to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options.
         const slideOpts = {
             initialSlide: 0,
-            slidesPerView: 1.3,
-            centeredSlides: true,
-            loop: true,
-            spaceBetween: 30,
+            slidesPerView: 3,
+            centeredSlides: false,
+            loop: false,
+            spaceBetween: -10,
         };
         return { slideOpts }
     },
@@ -41,20 +44,20 @@ export default defineComponent({
     ion-slides {
         color: black;
         margin-top: 20px;
-        min-height: 300px;
+        min-height: 150px;
     }
 
     ion-slide {
+        margin-left: 40px;
         flex-direction: column;
-        border-radius: 20px;
-        background-color: #222325;
+        border-radius: 10px; 
     }
 
 
     .up {
         height: 70%;
         width: 100%;
-        border-radius: 20px 20px 0 0;
+        border-radius: 10px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -62,10 +65,9 @@ export default defineComponent({
 
     .down {
         min-height: 30%;
-        padding: 0 20px;
         color: white;
-        font-size: 17px;
-        font-weight: bold;
+        font-size: 12px;
         text-align: left;
     }
+
 </style>

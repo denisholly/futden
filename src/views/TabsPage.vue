@@ -55,7 +55,4 @@ export default {
 </script>
 
 <style scoped>
-  ion-tab-bar {
-    --background: ;
-  }
 </style>
