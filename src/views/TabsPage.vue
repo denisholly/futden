@@ -57,18 +57,20 @@ export default {
 <style scoped>
 
   ion-tab-bar {
-    /* padding: 20px;
-    width: 80%;
-    margin: auto;
-    --background: rgba(65, 65, 65, 0.2);  
+    padding: 10px 20px;
     backdrop-filter: blur(5px);
-    border-radius: 15px 15px 0 0; */
-    --background: rgba(65, 65, 65, 0.2);
-    --ion-color-base: rgba(65, 65, 65, 0.2) !important;
+    --background: rgb(0, 0, 0,  0.6);
+    /* --ion-color-base: rgba(65, 65, 65, 0.2) !important; */
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
     bottom: 0px;
-    width: 100%;
     --color: #b9b9b9;
+
+    --ion-color-primary: rgb(0, 119, 255);
   }
 
   ion-tab-button {
