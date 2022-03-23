@@ -26,7 +26,7 @@ export default defineComponent({
         // Optional parameters to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options.
         const slideOpts = {
             initialSlide: 0,
-            slidesPerView: 3,
+            slidesPerView: 4,
             centeredSlides: false,
             loop: false,
             spaceBetween: -10,
@@ -39,13 +39,15 @@ export default defineComponent({
 <style scoped>
     ion-slides {
         color: white;
-        min-height: 100px;
+        min-height: 80px;
+        width: 100%;
     }
 
     ion-slide {
+        font-size: 12px;
         margin-left: 40px;
         flex-direction: column;
-        border-radius: 10px;
+        border-radius: 8px;
         background-color: rgb(0, 119, 255); 
     }
 

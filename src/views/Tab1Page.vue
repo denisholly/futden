@@ -1,9 +1,9 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
+      <!-- <ion-toolbar>
         <ion-title>Home</ion-title>
-      </ion-toolbar>
+      </ion-toolbar> -->
     </ion-header>
     <ion-content :fullscreen="true">
         <ion-grid class="header">
@@ -46,17 +46,21 @@
 </template>
 
 <script lang="js">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonContent } from '@ionic/vue';
 import TheNewsSwiper from '@/components/TheNewsSwiper.vue';
 import HomeTable from '@/components/HomeTable.vue';
 import TheCategories from '@/components/TheCategories.vue';
 
 export default  {
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, TheNewsSwiper, HomeTable, TheCategories},
+  components: { IonHeader, IonContent, IonPage, TheNewsSwiper, HomeTable, TheCategories},
 }
 </script>
 
 <style scoped>
+  h1 {
+    margin: 0;
+  }
+
   ion-grid {
     padding: 5px 0;
   }
