@@ -77,8 +77,7 @@
     }
 
     .tableContent {
-        padding: 15px;
-        width: 100%;
+        padding: 15px 5px;
         margin-top: 15px;
         background-color: #222325;
         border-radius: 10px;

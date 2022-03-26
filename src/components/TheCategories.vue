@@ -12,6 +12,10 @@
             <ion-icon :icon="shirt" />
             Players
         </ion-slide>
+        <ion-slide>
+            <ion-icon :icon="shirt" />
+            Players
+        </ion-slide>
     </ion-slides>
 </template>
 
@@ -26,7 +30,7 @@ export default defineComponent({
         // Optional parameters to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options.
         const slideOpts = {
             initialSlide: 0,
-            slidesPerView: 4,
+            slidesPerView: 7,
             centeredSlides: false,
             loop: false,
             spaceBetween: -10,
@@ -39,7 +43,7 @@ export default defineComponent({
 <style scoped>
     ion-slides {
         color: white;
-        min-height: 80px;
+        min-height: 60px;
         width: 100%;
     }
 
