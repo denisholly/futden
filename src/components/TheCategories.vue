@@ -1,19 +1,15 @@
 <template>
     <ion-slides pager="false" :options="slideOpts">
         <ion-slide>
-            <ion-icon :icon="swapHorizontal" />
             Transfers
         </ion-slide>
         <ion-slide>
-            <ion-icon :icon="newspaper" />
             News
         </ion-slide>
         <ion-slide>
-            <ion-icon :icon="shirt" />
             Players
         </ion-slide>
         <ion-slide>
-            <ion-icon :icon="shirt" />
             Players
         </ion-slide>
     </ion-slides>
@@ -43,7 +39,7 @@ export default defineComponent({
 <style scoped>
     ion-slides {
         color: white;
-        min-height: 60px;
+        min-height: 30px;
         width: 100%;
     }
 

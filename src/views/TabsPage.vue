@@ -24,7 +24,7 @@
               <!-- <ion-label>Transfers</ion-label> -->
             </ion-tab-button>
 
-            <ion-tab-button tab="tab5" href="/tabs/tab5">
+            <ion-tab-button tab="players" href="/tabs/players">
               <ion-icon :icon="shirt" />
               <!-- <ion-label>Club</ion-label> -->
             </ion-tab-button>
@@ -59,14 +59,8 @@ export default {
   ion-tab-bar {
     padding: 10px 20px;
     /* backdrop-filter: blur(5px); */
-    --background: rgba(20, 20, 20, 0.95);
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+    --background: rgba(20, 20, 20);
     text-align: center;
-    bottom: 0px;
     --color: #b9b9b9;
     --ion-color-primary: rgb(0, 119, 255);
     --border: none;

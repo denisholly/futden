@@ -1,7 +1,7 @@
 <template>
-    <ion-slides pager="false" :options="slideOpts">
-        <ion-slide v-for="card in news.slice().reverse()" :key="card.id">
-            <div class="up" :style="{ backgroundImage: 'url(' + card.url + ')' }">
+    <ion-slides v-if="nodeNews" pager="false" :options="slideOpts">
+        <ion-slide v-for="card in nodeNews" :key="card.tag">
+            <div class="up" :style="{ backgroundImage: 'url(' + card.img + ')' }">
 
             </div>
             <div class="down">
@@ -17,27 +17,44 @@
 <script> 
 import { defineComponent } from 'vue';
 import { IonSlides, IonSlide } from '@ionic/vue';
+import axios from 'axios';
 
 export default defineComponent({
-    inject: ['news'],
     components: { IonSlides, IonSlide },
-    setup() {
-        // Optional parameters to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options.
-        const slideOpts = {
-            initialSlide: 0,
-            slidesPerView: 3,
-            centeredSlides: false,
-            loop: false,
-            spaceBetween: -10,
-        };
-        return { slideOpts }
+    data() {
+        return {
+            slideOpts: {
+                initialSlide: 0,
+                slidesPerView: 3,
+                centeredSlides: false,
+                loop: false,
+                spaceBetween: -10,
+            },
+            nodeNews: null
+        }
     },
     computed: {
         setBg() {
             return "background-image: url('');";
         }
     },
-});
+        async created () {
+        // await axios.get('http://localhost:3000/goal-com/fetched-news')
+        //     .then(res => {
+        //         const nodeNews = res.data;
+        //         console.log('News', nodeNews);
+        //         this.nodeNews.push(nodeNews);
+        //     })
+        //     .catch(error => console.log(error))
+
+        try {
+            const { data } = await axios.get('http://localhost:3000/goal-com/fetched-news')
+            this.nodeNews = data;
+        } catch (err) {
+            console.log(err);
+        }
+  },
+})
 </script>
 
 <style scoped>

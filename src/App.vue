@@ -7,6 +7,7 @@
 <script lang="js">
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import { defineComponent } from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
   data() {
@@ -42,7 +43,7 @@ export default defineComponent({
           desc: 'adfasd',
           url: 'https://eu-images.contentstack.com/v3/assets/bltcc7a7ffd2fbf71f5/bltcd406b9d35f527bf/61587155fc8c5c7f48c43b4b/0165bf696bc2d06726eab9b372086c7df45becf3.jpg?auto=webp&format=pjpg&quality=80&width=1024'
         },
-      ]
+      ],
     }
   },
   provide() {
@@ -51,8 +52,6 @@ export default defineComponent({
       teams: this.teams,
     };
   },
-
-  name: 'App',
   components: {
     IonApp,
     IonRouterOutlet,

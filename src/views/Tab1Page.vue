@@ -21,17 +21,18 @@
         <ion-grid>
           <ion-row>
             <div class="fullTitle">
-              <h1 class="title">Latest News</h1>
-              <p class="seeAll">See All</p>
+              <h1 class="title">Categories</h1>
             </div>
-            <the-news-swiper></the-news-swiper>
+            <the-categories></the-categories>
           </ion-row>
           <ion-row>
             <div class="fullTitle">
-              <h1 class="title">Categories</h1>
-              <p class="seeAll">See All</p>
+              <h1 class="title">Latest News</h1>
+              <router-link to="/tabs/tab2">
+                <p class="seeAll">See All</p>
+              </router-link>
             </div>
-            <the-categories></the-categories>
+            <the-news-swiper></the-news-swiper>
           </ion-row>
           <ion-row>
             <div class="fullTitle">
@@ -65,6 +66,10 @@ export default  {
     padding: 5px 0;
   }
 
+  ion-row {
+    margin-bottom: 20px;
+  }
+
   .header {
     width: 200px;
   }
@@ -74,6 +79,9 @@ export default  {
     flex-direction: row;
     align-items: center;
     width: 100%;
+    border-bottom: 2px solid rgb(41, 41, 41);
+    margin-bottom: 20px;
+    padding: 20px 0;
   }
 
   .header h1 {
@@ -85,10 +93,21 @@ export default  {
     padding: 0 20px;
   }
 
-  .seeAll {
+  router-link {
     width: 50%;
     padding: 0 20px;
     color: rgb(0, 119, 255);
     text-align: end;
+    display: inline-block;
+    align-self: flex-end;
   }
+
+  router-link:link,
+  router-link:visited,
+  router-link:hover,
+  router-link:active {
+    text-decoration: none;
+    font-weight: normal;
+  }
+
 </style>

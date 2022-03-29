@@ -56,7 +56,7 @@
         },
         computed: {
             top5Teams () {
-                return this.teams.slice(0, 5);
+                return this.teams.slice(0, 20);
             }
         },
         methods: {
@@ -78,7 +78,7 @@
 <style scoped>
 
     table {
-        width: 80%;
+        width: 95%;
         margin: auto;
         font-size: 13px;
         border-collapse: separate;
@@ -111,6 +111,7 @@
 
     .teamStats {
         text-align: center;
+        padding: 0 3px;
     }
 
     .clStyle {
