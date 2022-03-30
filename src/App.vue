@@ -7,7 +7,6 @@
 <script lang="js">
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import { defineComponent } from 'vue';
-import axios from 'axios';
 
 export default defineComponent({
   data() {

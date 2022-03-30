@@ -33,4 +33,5 @@ export default  {
     width: 100%;
     border-bottom: 2px solid rgb(41, 41, 41);
   }
+  
 </style>

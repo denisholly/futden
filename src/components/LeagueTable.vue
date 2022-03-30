@@ -115,7 +115,7 @@
     }
 
     .clStyle {
-        border-left: 2px solid green;
+        border-left: 2px solid dodgerblue;
     }
 
     .elStyle {

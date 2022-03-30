@@ -6,38 +6,16 @@
       </ion-toolbar> -->
     </ion-header>
     <ion-content :fullscreen="true">
-        <ion-grid class="header">
-          <ion-row>
-            <!-- <ion-col>
-              <h1>FutDen</h1>
-            </ion-col>
-            <ion-col>
-              <ion-chip>
-                <ion-label color="secondary">Beta</ion-label>
-              </ion-chip>  
-            </ion-col> -->
-          </ion-row>
-        </ion-grid>
         <ion-grid>
           <ion-row>
             <div class="fullTitle">
-              <h1 class="title">Categories</h1>
-            </div>
-            <the-categories></the-categories>
-          </ion-row>
-          <ion-row>
-            <div class="fullTitle">
               <h1 class="title">Latest News</h1>
-              <router-link to="/tabs/tab2">
-                <p class="seeAll">See All</p>
-              </router-link>
             </div>
             <the-news-swiper></the-news-swiper>
           </ion-row>
           <ion-row>
             <div class="fullTitle">
               <h1 class="title">PL Table</h1>
-              <p class="seeAll">See All</p>
             </div>
             <home-table></home-table>
           </ion-row>
@@ -50,10 +28,9 @@
 import { IonPage, IonHeader, IonContent } from '@ionic/vue';
 import TheNewsSwiper from '@/components/TheNewsSwiper.vue';
 import HomeTable from '@/components/HomeTable.vue';
-import TheCategories from '@/components/TheCategories.vue';
 
 export default  {
-  components: { IonHeader, IonContent, IonPage, TheNewsSwiper, HomeTable, TheCategories},
+  components: { IonHeader, IonContent, IonPage, TheNewsSwiper, HomeTable },
 }
 </script>
 

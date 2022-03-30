@@ -78,7 +78,7 @@
 <style scoped>
 
     table {
-        width: 80%;
+        width: 95%;
         margin: auto;
         font-size: 13px;
         border-collapse: separate;
@@ -111,10 +111,11 @@
 
     .teamStats {
         text-align: center;
+        padding: 0 3px;
     }
 
     .clStyle {
-        border-left: 2px solid green;
+        border-left: 2px solid dodgerblue;
     }
 
     .elStyle {

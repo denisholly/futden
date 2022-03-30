@@ -1,13 +1,11 @@
 <template>
     <ion-slides v-if="nodeNews" pager="false" :options="slideOpts">
         <ion-slide v-for="card in nodeNews" :key="card.tag">
-            <div class="up" :style="{ backgroundImage: 'url(' + card.img + ')' }">
-
+            <!-- <div class="up" :style="{ backgroundImage: 'url(' + card.img + ')' }"> -->
+            <div class="up" :style="{ backgroundImage: 'url(' + setCardBg(card.img) + ')' }">
+    
             </div>
             <div class="down">
-                <!-- <ion-chip>
-                    <ion-label color="secondary">Secondary Label</ion-label>
-                </ion-chip> -->
                 <p> {{ card.title }} </p>
             </div>
         </ion-slide>
@@ -33,12 +31,13 @@ export default defineComponent({
             nodeNews: null
         }
     },
-    computed: {
-        setBg() {
-            return "background-image: url('');";
+    methods: {
+        setCardBg (url) {
+            const editedUrl = url.slice(0, -11) + "100"; 
+            return editedUrl;
         }
     },
-        async created () {
+    async created () {
         // await axios.get('http://localhost:3000/goal-com/fetched-news')
         //     .then(res => {
         //         const nodeNews = res.data;
@@ -50,10 +49,11 @@ export default defineComponent({
         try {
             const { data } = await axios.get('http://localhost:3000/goal-com/fetched-news')
             this.nodeNews = data;
+            console.log(data);
         } catch (err) {
             console.log(err);
         }
-  },
+    },
 })
 </script>
 
