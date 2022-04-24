@@ -6,14 +6,14 @@
                 <th class="name">Name</th>
                 <th>Position</th>
             </tr>
-            <tr v-for="player in players" :key="player.id" class="teamInfo">
-                <td class="playerNumber"> {{ player.number }} </td>
-                <td>
-                    <img :src="player.photo" class="badge">
-                </td>
-                <td class="name"> {{ player.name }} </td>
-                <td class="position"> {{ player.short_position }} </td>
-            </tr>
+                <tr v-for="player in players" :key="player.id" class="teamInfo">
+                    <td class="playerNumber"> {{ player.number }} </td>
+                    <td>
+                        <img :src="player.photo" class="badge">
+                    </td>
+                    <td class="name"><router-link :to="'/players/' + player.id"> {{ player.name }} </router-link></td>
+                    <td class="position"> {{ player.short_position }} </td>
+                </tr>
         </table>
 </template>
 
@@ -26,8 +26,8 @@
                 players: [],
             }
         },
-        created () {
-            axios.get('https://futden-chelsea-players-default-rtdb.europe-west1.firebasedatabase.app/response.json')
+        async created () {
+            await axios.get('https://futden-chelsea-players-default-rtdb.europe-west1.firebasedatabase.app/response.json')
                 .then(res => {
                     const players = res.data[0].players;
                     console.log('Players', players);
@@ -94,6 +94,15 @@
 
     th {
         padding: 0 20px;
+    }
+
+    router-link {
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
     }
 
 </style>

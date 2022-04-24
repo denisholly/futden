@@ -6,22 +6,18 @@
           <ion-tab-bar slot="bottom">
             <ion-tab-button tab="home" href="/home">
               <ion-icon :icon="home" />
-              <!-- <ion-label>Home</ion-label> -->
             </ion-tab-button>
               
             <ion-tab-button tab="news" href="/news">
               <ion-icon :icon="newspaper" />
-              <!-- <ion-label>News</ion-label> -->
             </ion-tab-button>
             
             <ion-tab-button tab="table" href="/table">
               <ion-icon :icon="trophy" />
-              <!-- <ion-label>League</ion-label> -->
             </ion-tab-button>
 
             <ion-tab-button tab="players" href="/players">
               <ion-icon :icon="shirt" />
-              <!-- <ion-label>Club</ion-label> -->
             </ion-tab-button>
         </ion-tab-bar>
       </div>

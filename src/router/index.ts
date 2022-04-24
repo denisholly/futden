@@ -30,6 +30,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'players',
         component: () => import('@/views/PlayersPage.vue')
+      },
+      {
+        path: 'players/:id',
+        component: () => import('@/views/PlayerInfoPage.vue')
       }
     ]
   }
